@@ -11,8 +11,8 @@ if __name__ == "__main__":
     save_dir = os.path.join(os.getcwd(), "Figures", "Uncertainty Test")
     samples = 1000
     batches = 2
-    sigma = np.cos(np.linspace(0, 2 * np.pi, samples)) * 5 + 6
     x = np.linspace(0, 2 * np.pi, samples)
+    sigma = np.cos(x) * 5 + 6
     mu = x * 5
     target_data = np.empty(shape=(batches, samples))
     input_data = np.empty(shape=(batches, samples))
