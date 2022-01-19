@@ -1,12 +1,17 @@
-# Heteroskedasticity-DNN
+# Heteroskedasticity Regression
 Full Log-Likelihood Heteroskedastic Regression with Deep Neural Networks and Tensorflow
 ## Linear <br/>
-#### Samples from a Heteroskedastic Normal Distribution 
-![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/samples.png)
-#### True and Estimated Parameters
-![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/params.png)
+### Deterministic parameters with no epistemic uncertainty 
+![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/sampleslinear_deterministic.png)
+![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/paramslinear_deterministic.png)
+## Random parameters with epistemic uncertainty 
+![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/sampleslinear_epistemic.png)
+![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/paramslinear_epistemic.png)
+
 ## Non Linear <br/>
-#### Samples from a Heteroskedastic Normal Distribution 
-![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/samples2.png)
-#### True and Estimated Parameters
-![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/params2.png)
+## Deterministic parameters with no epistemic uncertainty  
+![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/samplescosine_deterministic.png)
+![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/paramscosine_deterministic.png)
+## Random parameters with epistemic uncertainty  
+![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/samplescosine_epistemic.png)
+![alt-text](https://github.com/claCase/Heteroskedasticity-DNN/blob/main/Figures/paramscosine_epistemic.png)
