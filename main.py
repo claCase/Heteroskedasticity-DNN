@@ -8,12 +8,12 @@ import os
 
 
 if __name__ == "__main__":
-    save_dir = os.path.join(os.getcwd(), "Figures", "Uncertainty Test")
+    save_dir = os.path.join(os.getcwd(), "Figures")
     samples = 1000
     batches = 2
     x = np.linspace(0, 2 * np.pi, samples)
     sigma = np.cos(x) * 5 + 6
-    mu = x * 5
+    mu = np.cos(x*3) * 5
     target_data = np.empty(shape=(batches, samples))
     input_data = np.empty(shape=(batches, samples))
     for i in range(batches):
@@ -38,14 +38,14 @@ if __name__ == "__main__":
 
     model.compile(optimizer="adam", loss=lambda y, y_hat: -distr(y_hat).log_prob(y))
 
-    model.fit(x=input_model_data, y=target_model_data, epochs=200, shuffle=True)
+    model.fit(x=input_model_data, y=target_model_data, epochs=300, shuffle=True)
     preds = model.predict(input_model_data)
     model_samples = distr(preds).sample(1)
 
     plt.scatter(input_model_data.flatten(), model_samples.numpy().flatten(), color="fuchsia", label="Model Samples", s=2.5)
     plt.title("Samples")
     plt.legend()
-    plt.savefig(os.path.join(save_dir, "samples.png"))
+    plt.savefig(os.path.join(save_dir, "samples2.png"))
     fig, ax = plt.subplots(2)
     preds2 = model.predict(x[:, None])
     mu_pred = preds2[:, 0]
@@ -59,6 +59,6 @@ if __name__ == "__main__":
     ax[1].set_title("Sigma")
     ax[1].legend()
     plt.tight_layout()
-    plt.savefig(fname=os.path.join(save_dir, "params.png"))
+    plt.savefig(fname=os.path.join(save_dir, "params2.png"))
 
     plt.show()
