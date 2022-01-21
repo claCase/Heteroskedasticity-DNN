@@ -1,5 +1,9 @@
 # Heteroskedasticity Regression
-Full Log-Likelihood Heteroskedastic Regression with Deep Neural Networks and Tensorflow
+Full Log-Likelihood Heteroskedastic Regression with Deep Neural Networks and Tensorflow <br/>
+Install required libraries:
+```console
+python -m pip install -r requirements.txt
+```
 # Linear <br/>
 ### Deterministic parameters with no epistemic uncertainty 
 ```console
